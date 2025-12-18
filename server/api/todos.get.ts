@@ -1,9 +1,6 @@
-export default defineEventHandler(() => {
-	return [
-		{
-			id: 1,
-			title: "learning",
-			done: false,
-		},
-	];
+import { db } from "../database";
+import { todos } from "../database/schema";
+
+export default defineEventHandler(async () => {
+	return await db.select().from(todos);
 });
