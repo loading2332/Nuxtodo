@@ -14,7 +14,10 @@ const { data: todos, error, status } = await useFetch("/api/todos", { lazy: true
 		>
 			{{ todo.title }}
 			<div class="button-container">
-				<NuxtLink :to="{ name: 'todos-id', params: { id: todo.id } }">Detail</NuxtLink>
+				<NuxtLink
+					role="button"
+					:to="{ name: 'todos-id', params: { id: todo.id } }"
+				>Detail</NuxtLink>
 			</div>
 		</article>
 		<article v-if="error">
