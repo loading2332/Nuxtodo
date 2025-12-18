@@ -5,7 +5,7 @@ const isSubmitting = ref(false); // 添加这行
 const handleSubmit = async () => {
 	isSubmitting.value = true; // 开始提交
 
-	await $fetch("/api/todos", {
+	const result = await $fetch("/api/todos", {
 		method: "POST",
 		body: {
 			title: title.value,
@@ -13,7 +13,10 @@ const handleSubmit = async () => {
 	});
 
 	isSubmitting.value = false;
-	await navigateTo("/");
+	await navigateTo({
+		name: "todos-id",
+		params: { id: result?.id },
+	});
 };
 </script>
 
