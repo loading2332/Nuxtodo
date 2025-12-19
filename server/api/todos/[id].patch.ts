@@ -23,7 +23,6 @@ export default defineEventHandler(async (event) => {
 		title: body.title,
 		completed: body.completed,
 	}).where(eq(todos.id, paramsResult.data.id)).returning();
-
-	return result;
+	return result[0];
 },
 );

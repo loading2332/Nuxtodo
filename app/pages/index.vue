@@ -8,7 +8,7 @@ const handleDelete = async (id: number) => {
 	await $fetch(`/api/todos/${id}`, {
 		method: "DELETE",
 	});
-	refresh();
+	await refresh();
 	isDeleting.value = false;
 };
 </script>
