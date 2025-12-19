@@ -13,6 +13,7 @@
 	}
 	.button-container {
 		display: flex;
-		justify-content: flex-end;
+		justify-content: end;
+		gap: 1rem;
 	}
 </style>
