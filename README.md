@@ -1,4 +1,5 @@
 # Nuxtodo
+> https://nuxtodo-beta.vercel.app/
 
 A full-stack todo application built with Nuxt 4, featuring a PostgreSQL database and RESTful API.
 
